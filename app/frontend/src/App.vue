@@ -1,10 +1,17 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div class="geral">
+    <Sidebar />
+    <router-view class="page" />
+  </div>
 </template>
+
+<script>
+import Sidebar from "@/components/Sidebar.vue";
+
+export default {
+  components: { Sidebar },
+};
+</script>
 
 <style>
 #app {
@@ -15,16 +22,24 @@
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
+.geral {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: flex;
+  justify-items: center;
+  flex-direction: row;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.page {
+  width: 100%;
+  justify-content: space-around;
+  /* padding: 10px; */
+  /* height: 100%; */
+  /* margin: 0; */
+  /* top: 0; */
+  /* left: 0; */
 }
 </style>
