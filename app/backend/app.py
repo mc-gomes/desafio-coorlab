@@ -34,6 +34,22 @@ def list_of_cities():
     return cities
 
 
+@app.route('/cities', methods=['GET'])
+def get_cities():
+    cities = list_of_cities()
+    return jsonify(cities)
+
+@app.route('/cities/<int:id>', methods=['GET'])
+def get_city_by_id(id):
+    cities = list_of_cities()
+    city = cities[id]
+
+    destinations = []
+    for c in data:
+        if c["city"] == city: destinations.append(c)
+
+    return jsonify(destinations)
+
 if __name__ == "__main__":
     app.run(debug=True, port=3000)
 
