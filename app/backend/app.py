@@ -28,6 +28,11 @@ def get_destination(id):
     else:
         return None
 
+def list_of_cities():
+    cities = [c["city"] for c in data]
+    cities = list(dict.fromkeys([c["city"] for c in data]))
+    return cities
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=3000)
