@@ -15,7 +15,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 :root {
   --sidebar-bg-color: #0f2b42;
@@ -24,10 +23,8 @@ export default {
 }
 
 img {
-  /* height: 500px; */
   width: 150px;
   margin: 15px 15px 20px;
-  /* object-fit: fill; */
 }
 
 .submenu {
@@ -43,8 +40,6 @@ img {
   color: #fff;
   background-color: var(--sidebar-bg-color);
 
-  /* float: left;
-  position: relative; */
   z-index: 1;
   top: 0;
   left: 0;

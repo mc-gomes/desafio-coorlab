@@ -10,7 +10,7 @@
             Tempo estimado: {{ resultado.duration }}
           </p>
         </div>
-        <div class="preco">
+        <div class="price">
           <p>
             <strong style="font-size: 20px;">Preço</strong><br>
             {{ resultado.price_confort }}
@@ -64,7 +64,7 @@ h3 {
   width: 300px;
 }
 
-.preco {
+.price {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
