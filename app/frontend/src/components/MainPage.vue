@@ -1,8 +1,8 @@
 <template>
   <div class="page-header"></div>
   <div class="card">
-    <div class="card-header"> 
-      <h3 class="title"><b>Calculadora de Viagem</b></h3>
+    <div class="card-header">
+      <h3 class="card-header-title"><b>Calculadora de Viagem</b></h3>
     </div>
     <div class="card-content">
       <div class="form">
@@ -25,7 +25,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 .page-header {
-  height: 50px;
+  height: 25px;
   overflow: hidden;
   background-color: #f1f1f1;
   padding: 20px 10px;
@@ -35,27 +35,23 @@ export default {
 }
 .card {
   padding: 20px;
-  /* justify-items: end; */
-  /* transition: 0.3s; */
 }
-
 .card-header {
   height: 50px;
   overflow: hidden;
   background-color: #0f2b42;
   color: #f1f1f1;
-  /* padding: 20px 10px; */
-  /* width: 50%; */
   align-content: flex-start;
   top: 0;
-  /* margin-left: 15px; */
   margin-top: 50px;
   position: relative;
   border-radius: 4px 4px 0 0;
 }
-.card-header title {
-  float:left;
+.card-header-title {
+  float: left;
   justify-content: start;
+  padding-left: 5px;
+  margin: 15px 10px 5px;
 }
 .card-content {
   width: auto;
@@ -65,7 +61,7 @@ export default {
   border-radius: 4px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-items: start;
 }
 
 .form {
