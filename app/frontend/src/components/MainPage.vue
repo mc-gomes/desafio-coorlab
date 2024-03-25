@@ -17,15 +17,18 @@
           </select>
           <label for="data">Data</label>
           <input type="date" class="fields" id="data" name="data" placeholder="Selecione uma data" />
-          <button type="submit" class="buscar-btn" v-on:click="searchDestination">
+          <button type="submit" class="search-btn" v-on:click="searchDestination">
             Buscar
           </button>
         </div>
 
-        <div class="card-output">          
+        <div class="card-output">
           <Destination v-if="selectedCity && botaoClick" :destinations="destinationsByCity" />
           <Destination v-else-if="currentCity" :destinations="destinationsByCity" />
           <div v-else>Nenhum dado encontrado.</div>
+          <div class="clear" v-if="currentCity">
+            <button class="clear-btn">Limpar</button>
+          </div>
         </div>
       </div>
     </div>
@@ -147,7 +150,8 @@ export default {
   margin-bottom: 20px;
   margin-left: 50px;
   padding: 50px;
-  display: flex;
+  display: grid;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -171,7 +175,7 @@ input[type="date"] {
   align-items: start;
 }
 
-button {
+.search-btn {
   width: 50%;
   padding: 10px;
   bottom: 0;
@@ -181,8 +185,22 @@ button {
   border-radius: 3px;
   cursor: pointer;
 }
-
-button:hover {
+.search-btn:hover {
   background-color: #0056b3;
+}
+
+.clear {
+  justify-self: end;
+  position: relative;
+  padding-right: 20px;
+}
+
+.clear-btn {
+  width: 150px;
+  padding: 10px 0;
+  background-color: #e9b91c;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }
 </style>

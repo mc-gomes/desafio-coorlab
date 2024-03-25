@@ -11,10 +11,10 @@
           </p>
         </div>
         <div class="preco">
-         <p>
-           <strong style="font-size: 20px;">Preço</strong><br>
+          <p>
+            <strong style="font-size: 20px;">Preço</strong><br>
             {{ resultado.price_confort }}
-         </p> 
+          </p>
         </div>
       </div>
     </div>
@@ -46,7 +46,7 @@ h3 {
 .grid-container {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  gap: 15px; 
+  gap: 15px;
 }
 
 .grid-item {
@@ -60,7 +60,7 @@ h3 {
   border: 1px solid #ddd;
   border-radius: 8px;
   text-align: left;
-  background-color:#dbd7d7;
+  background-color: #dbd7d7;
   width: 300px;
 }
 
@@ -69,7 +69,7 @@ h3 {
   border: 1px solid #ddd;
   border-radius: 8px;
   text-align: left;
-  background-color:#dbd7d7;
+  background-color: #dbd7d7;
   width: 150px;
 }
 
