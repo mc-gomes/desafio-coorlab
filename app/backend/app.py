@@ -51,5 +51,5 @@ def get_city_by_id(id):
     return jsonify(destinations)
 
 if __name__ == "__main__":
-    app.run(debug=True, port=3000)
+    app.run(port=3000)
 
