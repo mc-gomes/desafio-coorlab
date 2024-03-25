@@ -7,10 +7,6 @@ data = destinations["transport"]
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/')
-def hello():
-    return 'Hello from Flask!'
-
 @app.route('/destinations', methods=['GET'])
 def get_destinations():
     return jsonify(data)
