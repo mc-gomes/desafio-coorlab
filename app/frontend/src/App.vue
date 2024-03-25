@@ -27,7 +27,7 @@ export default {
   height: 100%;
   top: 0;
   left: 0;
-  position: fixed;
+  position: relative;
   display: flex;
   justify-items: center;
   flex-direction: row;
