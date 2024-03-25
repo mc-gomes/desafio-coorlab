@@ -36,10 +36,5 @@ export default {
 .page {
   width: 100%;
   justify-content: space-around;
-  /* padding: 10px; */
-  /* height: 100%; */
-  /* margin: 0; */
-  /* top: 0; */
-  /* left: 0; */
 }
 </style>
