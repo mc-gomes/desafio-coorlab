@@ -26,7 +26,11 @@
           <Destination v-if="selectedCity && botaoClick" :destinations="destinationsByCity" />
           <Destination v-else-if="currentCity" :destinations="destinationsByCity" />
           <div v-else>Nenhum dado encontrado.</div>
-          <div class="clear" v-if="currentCity">
+          <div
+            class="clear"
+            v-if="currentCity"
+            v-on:click="clear"
+          >
             <button class="clear-btn">Limpar</button>
           </div>
         </div>
@@ -83,6 +87,11 @@ export default {
       this.isCitySelected = true;
       this.botaoClick = false;
     },
+    clear() {
+      this.selectedCity = "",
+      this.currentCity = "",
+      this.botaoClick = false
+    }
   },
 };
 </script>
